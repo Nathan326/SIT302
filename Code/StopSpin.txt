@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class StopSpin : MonoBehaviour
+{
+    public void SpinStop()
+    {
+        CubeSpin deactive;
+        deactive = gameObject.GetComponent<CubeSpin>();
+        deactive.enabled = false;
+    }
+    public void StartSpin()
+    {
+        CubeSpin deactive;
+        deactive = gameObject.GetComponent<CubeSpin>();
+        deactive.enabled = true;
+    }
+    CubeSpin deactive;
+    // Start is called before the first frame update
+    void Start()
+    {
+        deactive = gameObject.GetComponent<CubeSpin>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
+}
